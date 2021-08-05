@@ -26,8 +26,9 @@ public class PrincipalActivity extends AppCompatActivity {
         contatos.add("Marcio");
         contatos.add("Ramon");
         contatos.add("Vitoria");
+
         ListView listaContatos = findViewById(R.id.activity_principal_contatos);
-        listaContatos.setAdapter(new ArrayAdapter<String>(PrincipalActivity.this,, contatos));
+        listaContatos.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, contatos));
 
         FloatingActionButton floatingActionButton = findViewById(R.id.activity_principal_fab_adicionar);
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
